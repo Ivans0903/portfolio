@@ -1,88 +1,147 @@
 // Database Studi Kasus Proyek (Case Studies Data)
 const projectDetails = {
-    'project-1': {
-        title: "Keyboard Warrior: Heat Beat Mishap",
-        category: "Unity / C# Game Development",
-        problem: "Menciptakan game pemetik ritme yang mampu menggabungkan mekanik kecepatan ketik keyboard dengan dinamika audio-visual interaktif.",
-        role: "Game Developer (Research Assistant)",
-        process: "Merancang logika kontrol input menggunakan C#, menyusun feedback visual pada canvas Unity, serta melakukan optimasi audio sync.",
-        solution: "Game prototype interaktif dengan respon kontrol latensi rendah dan antarmuka intuitif.",
-        link: "https://ivans000.itch.io"
-    },
-    'project-2': {
-        title: "NekoInu",
-        category: "Unity / Multimedia Application",
-        problem: "Mengembangkan mekanik gameplay unik yang memadukan karakter ganda dengan interaksi lingkungan dinamis.",
-        role: "Lead Unity Developer",
-        process: "Penyusunan arsitektur C# modular, pengujian kontrol mekanik, serta integrasi visual asset ke dalam scene Unity.",
-        solution: "Game playable yang stabil dengan umpan balik visual yang memuaskan.",
-        link: "https://ivans000.itch.io"
-    },
-    'project-3': {
+    'sibigo': {
         title: "SIBIGo — Interactive Sign Language App",
         category: "AI / ML & Web Application",
-        problem: "Kurangnya platform interaktif untuk mempelajari bahasa isyarat SIBI secara real-time.",
-        role: "AI / ML Developer",
-        process: "Ekstraksi titik landmark tangan menggunakan MediaPipe, dilanjutkan dengan pelatihan model LSTM untuk klasifikasi gerak isyarat secara presisi.",
-        solution: "Aplikasi web interaktif dengan akurasi pengenalan isyarat yang tinggi secara real-time.",
-        link: "https://github.com/Ivans0903"
+        description: "SIBIGo adalah aplikasi web penerjemah bahasa isyarat secara real-time berbasis AI. Sistem ini mengintegrasikan computer vision (MediaPipe) untuk ekstraksi landmark gerakan tangan dan model deep learning (LSTM) untuk mengklasifikasikan gestur menjadi teks secara akurat dan responsif.",
+        video: "https://www.youtube.com/embed/67DpUm6uWpk",
+        images: [
+            "assets/images/sibigo/1.png",
+            "assets/images/sibigo/2.png",
+            "assets/images/sibigo/3.png"
+        ],
+        link: "https://github.com/Ivans0903/sibigo",
+        linkText: "Lihat Repository GitHub &rarr;"
     },
-    'project-4': {
-        title: "Garena Game Jam 2 Prototype",
-        category: "Rapid Game Prototyping",
-        problem: "Membangun game fungsional dan utuh dari awal dalam batas waktu ketat 45 jam.",
-        role: "Gameplay Programmer",
-        process: "Perancangan mekanik cepat, manajemen alur kerja tim, dan penyesuaian logika C# secara intensif.",
-        solution: "Berhasil menyelesaikan dan mendemonstrasikan game fungsional sesuai tenggat waktu kompetisi.",
-        link: "https://ivans000.itch.io"
+    'project2': {
+        title: "Judul Proyek Ke-2",
+        category: "Game Development",
+        description: "Deskripsi rinci mengenai proyek game development kedua ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+        video: "",
+        images: ["assets/images/sibigo/1.png"],
+        link: "#",
+        linkText: "Segera Hadir &rarr;"
+    },
+    'project3': {
+        title: "Judul Proyek Ke-3",
+        category: "Web Development",
+        description: "Deskripsi rinci mengenai proyek web development ketiga ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+        video: "",
+        images: ["assets/images/sibigo/1.png"],
+        link: "#",
+        linkText: "Segera Hadir &rarr;"
+    },
+    'project4': {
+        title: "Judul Proyek Ke-4",
+        category: "Data Science",
+        description: "Deskripsi rinci mengenai proyek data science keempat ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+        video: "",
+        images: ["assets/images/sibigo/1.png"],
+        link: "#",
+        linkText: "Segera Hadir &rarr;"
+    },
+    'project5': {
+        title: "Judul Proyek Ke-5",
+        category: "Computer Vision",
+        description: "Deskripsi rinci mengenai proyek computer vision kelima ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+        video: "",
+        images: ["assets/images/sibigo/1.png"],
+        link: "#",
+        linkText: "Segera Hadir &rarr;"
+    },
+    'project6': {
+        title: "Judul Proyek Ke-6",
+        category: "IoT System",
+        description: "Deskripsi rinci mengenai proyek IoT System keenam ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+        video: "",
+        images: ["assets/images/sibigo/1.png"],
+        link: "#",
+        linkText: "Segera Hadir &rarr;"
     }
 };
+
+let currentImages = [];
+let currentImageIndex = 0;
 
 // Fungsi Membuka Modal Detail Proyek (Multi-page feel)
 function openProject(projectId) {
     const data = projectDetails[projectId];
     if (!data) return;
 
+    currentImages = data.images;
+
     const modalBody = document.getElementById('modal-body');
+    
+    // Build images HTML
+    let imagesHtml = '';
+    if (data.images && data.images.length > 0) {
+        imagesHtml = '<div style="display: flex; gap: 12px; margin: 20px 0; overflow-x: auto; padding-bottom: 10px;">';
+        data.images.forEach((img, index) => {
+            imagesHtml += `<img src="${img}" onclick="openLightbox(${index})" style="height: 180px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">`;
+        });
+        imagesHtml += '</div>';
+    }
+
+    let videoHtml = '';
+    if (data.video && data.video.trim() !== '') {
+        videoHtml = `
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+            <iframe src="${data.video}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>`;
+    }
+
     modalBody.innerHTML = `
-        <span class="tag">${data.category}</span>
-        <h2 style="margin: 10px 0 20px;">${data.title}</h2>
+        <span class="tag" style="margin-bottom: 12px; display: inline-block;">${data.category}</span>
+        <h2 style="margin: 0 0 24px; font-size: 1.8rem;">${data.title}</h2>
         
-        <div style="margin-bottom: 20px;">
-            <h4>Latar Belakang & Masalah:</h4>
-            <p style="color: var(--text-muted);">${data.problem}</p>
-        </div>
+        ${videoHtml}
 
-        <div style="margin-bottom: 20px;">
-            <h4>Peran Saya:</h4>
-            <p style="color: var(--text-muted);">${data.role}</p>
-        </div>
+        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; font-size: 1.05rem;">${data.description}</p>
+        
+        ${imagesHtml}
 
-        <div style="margin-bottom: 20px;">
-            <h4>Proses Pengerjaan:</h4>
-            <p style="color: var(--text-muted);">${data.process}</p>
-        </div>
-
-        <div style="margin-bottom: 25px;">
-            <h4>Solusi & Hasil:</h4>
-            <p style="color: var(--text-muted);">${data.solution}</p>
-        </div>
-
-        <a href="${data.link}" target="_blank" class="btn btn-primary">Mainkan di Itch.io / Repository &rarr;</a>
+        <a href="${data.link}" target="_blank" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">${data.linkText}</a>
     `;
 
-    document.getElementById('project-modal').style.display = 'flex';
+    document.getElementById('project-modal').classList.add('show');
 }
 
 // Fungsi Menutup Modal Detail Proyek
 function closeProject() {
-    document.getElementById('project-modal').style.display = 'none';
+    document.getElementById('project-modal').classList.remove('show');
+    // Stop video playing by clearing innerHTML
+    document.getElementById('modal-body').innerHTML = '';
 }
 
-// Menutup modal jika area luar diklik
+// Lightbox Functions
+function openLightbox(index) {
+    currentImageIndex = index;
+    const lightbox = document.getElementById('lightbox-overlay');
+    document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
+    lightbox.classList.add('show');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox-overlay').classList.remove('show');
+}
+
+function changeLightboxImage(direction, event) {
+    event.stopPropagation();
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) currentImageIndex = currentImages.length - 1;
+    if (currentImageIndex >= currentImages.length) currentImageIndex = 0;
+    document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
+}
+
+// Menutup modal & lightbox jika area luar diklik
 window.onclick = function (event) {
-    const modal = document.getElementById('project-modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    const projectModal = document.getElementById('project-modal');
+    const lightbox = document.getElementById('lightbox-overlay');
+    
+    if (event.target === projectModal) {
+        closeProject();
+    }
+    if (event.target === lightbox) {
+        closeLightbox();
     }
 };
