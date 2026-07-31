@@ -13,32 +13,46 @@ const projectDetails = {
         link: "https://github.com/Ivans0903/sibigo",
         linkText: "Lihat Repository GitHub &rarr;"
     },
-    'project2': {
-        title: "Judul Proyek Ke-2",
-        category: "Game Development",
-        description: "Deskripsi rinci mengenai proyek game development kedua ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
-        video: "",
-        images: ["assets/images/sibigo/1.png"],
-        link: "#",
-        linkText: "Segera Hadir &rarr;"
+    'cursealley': {
+        title: "Curse Alley",
+        category: "Game Development & ESP32",
+        description: "Curse Alley adalah proyek game Arcade Bowling yang inovatif. Menggunakan Arduino dan ESP32 sebagai pengganti gamepad, game ini menghadirkan kontrol fisik yang imersif.",
+        video: "https://www.youtube.com/watch?v=zbX9kiwdBh8",
+        images: ["assets/images/cursealley/1.jpg",
+            "assets/images/cursealley/2.jpg",
+            "assets/images/cursealley/3.jpg",
+            "assets/images/cursealley/4.jpg",
+            "assets/images/cursealley/5.jpg"
+        ],
+        link: "https://ivans000.itch.io/curse-alley",
+        linkText: "Lihat itch.io &rarr;"
     },
-    'project3': {
-        title: "Judul Proyek Ke-3",
-        category: "Web Development",
-        description: "Deskripsi rinci mengenai proyek web development ketiga ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
-        video: "",
-        images: ["assets/images/sibigo/1.png"],
-        link: "#",
-        linkText: "Segera Hadir &rarr;"
+    'pawscape': {
+        title: "PawScape",
+        category: "Python & Unity",
+        description: "Game menggunakan Python OpenCV dan Unity. Game ini menggunakan HandGesture dari Python lalu Unity menerima sinyal yang dikirimkan oleh Python sehingga bisa membuat game Interaksi yang menarik.",
+        video: "https://www.youtube.com/watch?v=J9vVWBpwdbY",
+        images: ["assets/images/pawscape/1.png",
+            "assets/images/pawscape/2.png",
+            "assets/images/pawscape/3.png"
+        ],
+        link: "https://ivans000.itch.io/pawscape",
+        linkText: "Lihat itch.io &rarr;"
     },
-    'project4': {
-        title: "Judul Proyek Ke-4",
-        category: "Data Science",
-        description: "Deskripsi rinci mengenai proyek data science keempat ini. Nantinya akan diisi dengan data dan penjelasan studi kasus yang mendalam.",
+    'wired': {
+        title: "Wired Solution",
+        category: "Unity",
+        description: "Game ini dibuat dengan waktu 48 Jam di laksanakan di BINUS University Jakarta pada lomba Garena Game Jam 3 yang di selenggarakan oleh Garena Indonesia. Tim saya yaitu = Apapun Selain TA. Dengan anggota Ivan Saputra, Shedy Indra Maulana, Muhammad Raihan Ripaie.",
         video: "",
-        images: ["assets/images/sibigo/1.png"],
-        link: "#",
-        linkText: "Segera Hadir &rarr;"
+        images: ["assets/images/wired/1.jpg",
+            "assets/images/wired/2.jpg",
+            "assets/images/wired/3.jpg",
+            "assets/images/wired/4.jpg",
+            "assets/images/wired/5.jpg",
+            "assets/images/wired/6.jpg"
+        ],
+        link: "https://ivans000.itch.io/wired-solution",
+        linkText: "Lihat itch.io &rarr;"
     },
     'project5': {
         title: "Judul Proyek Ke-5",
@@ -71,7 +85,7 @@ function openProject(projectId) {
     currentImages = data.images;
 
     const modalBody = document.getElementById('modal-body');
-    
+
     // Build images HTML
     let imagesHtml = '';
     if (data.images && data.images.length > 0) {
@@ -84,9 +98,15 @@ function openProject(projectId) {
 
     let videoHtml = '';
     if (data.video && data.video.trim() !== '') {
+        // Auto-convert standard YouTube watch URLs to embed URLs to prevent iframe errors
+        let embedUrl = data.video;
+        if (embedUrl.includes('watch?v=')) {
+            embedUrl = embedUrl.replace('watch?v=', 'embed/');
+        }
+
         videoHtml = `
         <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
-            <iframe src="${data.video}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="${embedUrl}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>`;
     }
 
@@ -137,7 +157,7 @@ function changeLightboxImage(direction, event) {
 window.onclick = function (event) {
     const projectModal = document.getElementById('project-modal');
     const lightbox = document.getElementById('lightbox-overlay');
-    
+
     if (event.target === projectModal) {
         closeProject();
     }
