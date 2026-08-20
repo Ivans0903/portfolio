@@ -10,7 +10,7 @@ const projectDetails = {
             "assets/images/sibigo/2.png",
             "assets/images/sibigo/3.png"
         ],
-        link: "https://github.com/Ivans0903/sibigo",
+        link: "https://github.com/Ivans0903/sibigo_web",
         linkText: "Lihat Repository GitHub &rarr;"
     },
     'cursealley': {
