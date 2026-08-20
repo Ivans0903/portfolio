@@ -137,6 +137,32 @@ function closeProject() {
 function openLightbox(index) {
     currentImageIndex = index;
     const lightbox = document.getElementById('lightbox-overlay');
+    
+    // Default lightbox has multiple images from a project
+    document.querySelector('.lightbox-prev').style.display = 'block';
+    document.querySelector('.lightbox-next').style.display = 'block';
+    
+    document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
+    lightbox.classList.add('show');
+}
+
+// Certificate Lightbox Function
+function openCertGallery(imagesArray) {
+    currentImages = imagesArray;
+    currentImageIndex = 0;
+    
+    // Hide arrows if only 1 certificate
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    if (currentImages.length <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else {
+        prevBtn.style.display = 'block';
+        nextBtn.style.display = 'block';
+    }
+
+    const lightbox = document.getElementById('lightbox-overlay');
     document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
     lightbox.classList.add('show');
 }
