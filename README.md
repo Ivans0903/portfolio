@@ -1,127 +1,129 @@
 <div align="center">
 
-  # 🌟 Ivan Saputra — Personal Portfolio Website
+# Ivan Saputra — Personal & Technical Portfolio
 
-  [![Summa Cumlaude](https://img.shields.io/badge/GPA-3.97%2F4.00%20(Summa%20Cumlaude)-blue?style=for-the-badge&logo=academic-cap)](https://telkomuniversity.ac.id)
-  [![Scopus Q3](https://img.shields.io/badge/Publication-Scopus%20Q3%20Indexed-emerald?style=for-the-badge&logo=researchgate)](https://doi.org/10.29207/resti.v10i4.7366)
-  [![WebP Optimized](https://img.shields.io/badge/Asset%20Optimization--61.9%25%20WebP-purple?style=for-the-badge&logo=speedtest)](https://github.com/Ivans0903/portfolio)
+[![GPA](https://img.shields.io/badge/GPA-3.97%2F4.00%20(Summa%20Cumlaude)-0284c7?style=flat-square&logo=academic-cap)](https://telkomuniversity.ac.id)
+[![Scopus Indexed](https://img.shields.io/badge/Publication-Scopus%20Q3%20Indexed-059669?style=flat-square&logo=scopus)](https://doi.org/10.29207/resti.v10i4.7366)
+[![Performance](https://img.shields.io/badge/Asset%20Optimization-WebP%20(-61.9%25)-7c3aed?style=flat-square&logo=lighthouse)](https://github.com/Ivans0903/portfolio)
+[![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20ES6%2B%20JS-2563eb?style=flat-square)](https://github.com/Ivans0903/portfolio)
 
-  **A modern, lightweight, and high-performance personal portfolio website built with pure HTML5, vanilla CSS3 glassmorphism, and responsive ES6+ JavaScript.**
+*Situs web portofolio profesional S1 Terapan Teknologi Rekayasa Multimedia — Telkom University.*
 
-  [📄 Unduh CV](https://drive.google.com/drive/folders/1UyH5_LK2GtNdy6DeXAWU7yYr3zTgQzcP?usp=sharing) • [📧 Hubungi Saya](mailto:ivansaputra100903@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/ivan-saputra-337b56269)
+[Kurikulum Vitae (CV)](https://drive.google.com/drive/folders/1UyH5_LK2GtNdy6DeXAWU7yYr3zTgQzcP?usp=sharing) &nbsp;|&nbsp; [Publikasi Scopus](https://doi.org/10.29207/resti.v10i4.7366) &nbsp;|&nbsp; [Profil LinkedIn](https://www.linkedin.com/in/ivan-saputra-337b56269) &nbsp;|&nbsp; [Kontak Email](mailto:ivansaputra100903@gmail.com)
 
 </div>
 
 ---
 
-## 📌 Ringkasan Portofolio (Portfolio Overview)
+## Deskripsi Ringkas (Executive Summary)
 
-Portofolio ini dirancang secara khusus untuk menampilkan perjalanan profesional, karya unggulan, publikasi ilmiah, dan pengalaman kepemimpinan dari **Ivan Saputra** — Lulusan S1 Terapan Teknologi Rekayasa Multimedia Telkom University (IPK 3.97 / 4.00, Summa Cumlaude).
+Dokumen ini memuat dokumentasi teknis dan informasi proyek portofolio profesional **Ivan Saputra**, lulusan S1 Terapan Teknologi Rekayasa Multimedia dari Telkom University (IPK **3.97 / 4.00**, predikat *Summa Cumlaude*).
 
-Situs web ini memadukan estetika modern (*glassmorphism*, skema warna slate/blue yang elegan, dan mikro-animasi responsif) dengan performa teknis yang sangat cepat (pengoptimalan aset WebP hingga **-61.9%** dari ukuran asli).
-
----
-
-## ⚡ Fitur Utama & Keunggulan Teknis
-
-- 🎨 **Modern Glassmorphism UI/UX**: Antarmuka interaktif yang dipadukan dengan *backdrop-filter blur*, animasi lembut, dan tata letak responsif di seluruh rasio layar (Desktop, Tablet, Mobile).
-- 📜 **Galeri Sertifikat Interaktif (Lightbox Modal)**:
-  - Dukungan navigasi multi-sertifikat (contoh: 4 Sertifikat Koordinator Asisten Praktikum).
-  - Indikator halaman aktif (*Live Counter* `1 / 4`), judul sertifikat dinamis, dan strip *thumbnail preview* interaktif.
-  - Dukungan navigasi *Keyboard Shortcuts* (`Panah Kiri`, `Panah Kanan`, `Escape`) dan gestur *Touch Swipe* untuk perangkat ponsel/tablet.
-- 🚀 **High Performance Asset Optimization**:
-  - Seluruh 29 aset gambar dikonversi ke format **WebP** (`.webp`) berketajaman tinggi (`quality=92`, `method=6`).
-  - Efisiensi bandwidth hingga **61.9% (dari 68.05 MB menjadi 25.90 MB)**, membuat pengunggahan dan waktu muat halaman sangat cepat.
-- 📱 **100% Responsif & Accessibility-Ready**: Didesain dari dasar agar tahan banting di layar seluler maupun monitor ultra-wide tanpa *overflow* atau bentrok layout.
+Portofolio ini dirancang menggunakan pendekatan arsitektur web modern tanpa ketergantungan pada *framework* eksternal yang berat. Aplikasi memanfaatkan **HTML5**, **Vanilla CSS3 (Design System Glassmorphism)**, dan **ES6+ JavaScript**, serta dioptimalkan menggunakan kompresi **WebP** berketajaman tinggi untuk memastikan performa *rendering* dan waktu muat halaman yang efisien.
 
 ---
 
-## 🛠️ Teknologi Yang Digunakan (Tech Stack)
+## Keahlian Utama (Core Competencies)
 
-### Core Web Stack
-| Teknologi | Kegunaan |
+| Bidang Spasialisasi | Industri & Perkakas Teknis |
 | :--- | :--- |
-| **HTML5** | Struktur semantik halaman dan aksesibilitas elemen. |
-| **CSS3 (Vanilla)** | Custom Design System, Variabel CSS, CSS Grid/Flexbox, dan efek *Glassmorphism*. |
-| **JavaScript (ES6+)** | Logika interaktif galeri lightbox, modal studi kasus, navigasi keyboard & touch swipe. |
-| **WebP Engine** | Kompresi gambar beresolusi tinggi tanpa mengurangi detail visual. |
-
-### Technical Domains (Keahlian Utama)
-- **AI / ML Engineering**: Python, Deep Learning (LSTM), Computer Vision (MediaPipe, OpenCV), Audio Classification (CNN Log-Mel Spectrogram).
-- **Software & Full-Stack Development**: Web Development (HTML/CSS/JS/PHP/MySQL), REST APIs.
-- **Game & Hardware Development**: Unity 3D/2D (C#), Virtual Reality (VR), ESP32 & Arduino Physical Controllers.
+| **Artificial Intelligence & Machine Learning** | Python, Deep Learning (LSTM), Computer Vision (MediaPipe, OpenCV), Audio Classification (Log-Mel Spectrogram, CNN). |
+| **Software & Web Engineering** | HTML5, CSS3 Custom Properties, JavaScript ES6+, PHP, MySQL, REST API, Web Accessibility. |
+| **Game Development & Interactive Tech** | Unity 3D/2D, C# Scripting, Virtual Reality (VR), Game Physics, UI/UX Design System. |
+| **Physical Computing & IoT Systems** | Microcontroller Programming (Arduino & ESP32), Serial Data Communication (Ardity Integration). |
 
 ---
 
-## 🚀 Karya Utama & Studi Kasus (Featured Projects)
+## Proyek Unggulan (Featured Projects)
 
-### 1. 🤖 SIBIGo — Interactive Sign Language App
-> **AI / ML & Web Application**  
-Aplikasi web penerjemah bahasa isyarat Indonesia (SIBI) secara *real-time* menggunakan **MediaPipe** untuk ekstraksi landmark gerakan tangan dan model **LSTM Deep Learning** untuk mengklasifikasikan gestur menjadi teks.  
-🔗 [Lihat Repository GitHub](https://github.com/Ivans0903/sibigo_web)
+### 1. SIBIGo — Interactive Sign Language Translation Web Application
+* **Kategori**: Artificial Intelligence / Machine Learning & Web Engineering
+* **Deskripsi**: Aplikasi penerjemah bahasa isyarat Indonesia (SIBI) secara *real-time* memanfaatkan kecerdasan buatan. Ekstraksi *hand landmarks* dilakukan via **MediaPipe**, yang kemudian diklasifikasikan oleh jaringan saraf tiruan **LSTM (Long Short-Term Memory)** menjadi teks.
+* **Tautan Repository**: [github.com/Ivans0903/sibigo_web](https://github.com/Ivans0903/sibigo_web)
 
-### 2. 🎳 Curse Alley
-> **Game Development & ESP32 Physical Controller**  
-Proyek game Arcade Bowling buatan Unity 3D yang dihubungkan dengan perangkat fisik **Arduino & ESP32** sebagai pengganti gamepad untuk pengalaman bermain fisik yang imersif.  
-🔗 [Lihat di Itch.io](https://ivans000.itch.io/curse-alley)
+### 2. Curse Alley — Arcade Bowling with Physical Controller
+* **Kategori**: Unity Game Development & Physical Computing (ESP32)
+* **Deskripsi**: Permainan arcade bowling interaktif yang dibangun menggunakan Unity 3D dan dihubungkan secara fisik dengan mikrokontroler **ESP32 & Arduino** sebagai *gamepad* berbasis sensor gerak fisik.
+* **Tautan Demostrasi**: [ivans000.itch.io/curse-alley](https://ivans000.itch.io/curse-alley)
 
-### 3. 🐾 PawScape
-> **Python OpenCV & Unity Integration**  
-Game interaktif yang mengintegrasikan *Hand Gesture Recognition* berbasis Python OpenCV yang mengirimkan sinyal kontrol secara *real-time* ke Unity Engine.  
-🔗 [Lihat di Itch.io](https://ivans000.itch.io/pawscape)
+### 3. PawScape — Gesture-Controlled Interactive Game
+* **Kategori**: Computer Vision & Unity Engine Integration
+* **Deskripsi**: Sistem gim interaktif berbasis pemrosesan citra digital. Mengintegrasikan algoritma deteksi gestur tangan Python **OpenCV** dengan Unity Engine melalui protokol komunikasi *socket connection*.
+* **Tautan Demostrasi**: [ivans000.itch.io/pawscape](https://ivans000.itch.io/pawscape)
 
-### 4. ⚡ Wired Solution
-> **Garena Game Jam 3 (48 Hours Challenge)**  
-Game arcade puzzle yang dikembangkan dalam waktu 48 jam di BINUS University Jakarta bersama Tim "Apapun Selain TA".  
-🔗 [Lihat di Itch.io](https://ivans000.itch.io/wired-solution)
-
----
-
-## 📄 Publikasi Ilmiah (Scientific Publication)
-
-- **Scopus Q3 Journal Article**:  
-  *“Lightweight Convolutional Neural Network for Robust and Label-Efficient Animal Sound Classification”*  
-  **Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi)**  
-  🔗 [DOI: 10.29207/resti.v10i4.7366](https://doi.org/10.29207/resti.v10i4.7366)
+### 4. Wired Solution — Arcade Puzzle Game
+* **Kategori**: Game Jam Challenge (Garena Game Jam 3)
+* **Deskripsi**: Gim arcade puzzle yang dikembangkan dalam kurun waktu 48 jam pada ajang Garena Game Jam 3 di BINUS University Jakarta oleh Tim "Apapun Selain TA".
+* **Tautan Demostrasi**: [ivans000.itch.io/wired-solution](https://ivans000.itch.io/wired-solution)
 
 ---
 
-## 💻 Cara Menjalankan Secara Lokal (Local Setup)
+## Publikasi Ilmiah (Scientific Publication)
 
-Portofolio ini dibangun tanpa dependensi *framework* yang berat, sehingga sangat mudah untuk dijalankan di lingkungan lokal:
+* **Judul Artikel**: *Lightweight Convolutional Neural Network for Robust and Label-Efficient Animal Sound Classification*
+* **Jurnal**: Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi)
+* **Pengindeksan**: **Scopus Q3**
+* **Digital Object Identifier (DOI)**: [10.29207/resti.v10i4.7366](https://doi.org/10.29207/resti.v10i4.7366)
+* **Bidang Fokus**: Bioacoustic Monitoring, Label-Efficient Deep Learning, Lightweight CNN Architecture.
 
-1. **Clone Repository**:
+---
+
+## Pengalaman Profesional & Kepemimpinan
+
+* **Unity Developer** — PT Kawan Kerja *(Jun 2025 – Des 2025)*  
+  Mengembangkan arsitektur *gameplay* modular 2D menggunakan C#, mengoptimalkan struktur skrip berorientasi objek yang berhasil mengurangi latensi eksekusi pada lebih dari 5 modul gim.
+* **Practicum Coordinator (4 Periode)** — Fakultas Ilmu Terapan, Telkom University *(Feb 2024 – Jul 2026)*  
+  Memimpin dan mengoordinasikan tim asisten laboratorium untuk mata kuliah Pemrograman Gim, Pemrograman Multimedia Interaktif, Pemrograman Web Interaktif, serta Algoritma dan Pemrograman.
+* **Ketua Program P2MD** — Kementerian Pendidikan dan Kebudayaan RI *(Jun 2023 – Nov 2023)*  
+  Memimpin Program Pemberdayaan Masyarakat Desa dengan hibah pendanaan Rp 27 Juta untuk implementasi komersialisasi digital produk olahan UMKM lokal.
+
+---
+
+## Optimasi Performa Aset (Asset Optimization Specs)
+
+Seluruh media gambar dalam aplikasi telah melalui proses migrasi dan kompresi tingkat tinggi berbasis format **WebP**:
+
+```text
+Ukuran Aset Awal (PNG/JPG)   : 68.05 MB (71.351.622 Bytes)
+Ukuran Aset Terkompres (WebP): 25.90 MB (27.154.142 Bytes)
+Penghematan Kapasitas Aset  : -61.9% (-44.20 MB)
+Metode Kompresi              : Pillow WebP Engine (Quality=92, Method=6, Preserved DPI)
+```
+
+---
+
+## Petunjuk Pengoperasian Lokal (Local Setup)
+
+1. **Kloning Repositori**:
    ```bash
    git clone https://github.com/Ivans0903/portfolio.git
    cd portfolio
    ```
 
-2. **Jalankan HTTP Server Lokal**:
-   Gunakan Python HTTP server (atau ekstensi Live Server di VS Code):
+2. **Jalankan Server HTTP Lokal**:
    ```bash
    python -m http.server 8080
    ```
 
-3. **Buka di Browser**:
-   Akses `http://localhost:8080` pada peramban favorit Anda.
+3. **Akses Aplikasi**:
+   Buka peramban web dan navigasikan ke `http.localhost:8080` atau `http://localhost:8080`.
 
 ---
 
-## 📬 Kontak & Media Sosial
+## Informasi Kontak
 
 <div align="center">
 
-| Platform | Link / Informasi |
+| Saluran Komunikasi | Alamat Tautan |
 | :--- | :--- |
-| 💼 **LinkedIn** | [linkedin.com/in/ivan-saputra-337b56269](https://www.linkedin.com/in/ivan-saputra-337b56269) |
-| 🐙 **GitHub** | [github.com/Ivans0903](https://github.com/Ivans0903) |
-| 🎮 **Itch.io** | [ivans000.itch.io](https://ivans000.itch.io) |
-| 📸 **Instagram** | [@ivans000](https://www.instagram.com/ivans000) |
-| 💬 **WhatsApp** | [+62 896-0162-8025](http://wa.me/6289601628025) |
-| ✉️ **Email** | [ivansaputra100903@gmail.com](mailto:ivansaputra100903@gmail.com) |
+| **Email Resmi** | [ivansaputra100903@gmail.com](mailto:ivansaputra100903@gmail.com) |
+| **LinkedIn** | [linkedin.com/in/ivan-saputra-337b56269](https://www.linkedin.com/in/ivan-saputra-337b56269) |
+| **GitHub** | [github.com/Ivans0903](https://github.com/Ivans0903) |
+| **Itch.io Portfolio** | [ivans000.itch.io](https://ivans000.itch.io) |
+| **WhatsApp Business** | [+62 896-0162-8025](http://wa.me/6289601628025) |
 
----
+<br>
 
-© 2026 **Ivan Saputra**. All Rights Reserved.
+© 2026 **Ivan Saputra**. *All rights reserved.*
 
 </div>
