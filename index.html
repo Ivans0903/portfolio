@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivan Saputra — Portfolio</title>
-    <link rel="icon" href="assets/iconme.png" type="image/png">
+    <link rel="icon" href="assets/iconme.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
             <div class="hero-image fade-in-left delay-2">
                 <div class="image-wrapper">
                     <div class="image-backdrop"></div>
-                    <img src="assets/me.png" alt="Ivan Saputra Profil" class="profile-img">
+                    <img src="assets/me.webp" alt="Ivan Saputra Profil" class="profile-img">
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                 <!-- Card 1: SIBIGo -->
                 <div class="project-card" onclick="openProject('sibigo')">
                     <div class="card-image-placeholder"
-                        style="background-image: url('assets/images/sibigo/1.png'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
+                        style="background-image: url('assets/images/sibigo/1.webp'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
                         <span
                             style="background: rgba(0,0,0,0.7); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">AI
                             / ML Application</span>
@@ -89,7 +89,7 @@
                 <!-- Card 2: Placeholder -->
                 <div class="project-card" onclick="openProject('cursealley')">
                     <div class="card-image-placeholder"
-                        style="background-image: url('assets/images/cursealley/1.jpg'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
+                        style="background-image: url('assets/images/cursealley/1.webp'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
                         <span
                             style="background: rgba(0,0,0,0.7); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Game
                             Development & ESP32</span>
@@ -105,7 +105,7 @@
                 <!-- Card 3: PawScape -->
                 <div class="project-card" onclick="openProject('pawscape')">
                     <div class="card-image-placeholder"
-                        style="background-image: url('assets/images/pawscape/1.png'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
+                        style="background-image: url('assets/images/pawscape/1.webp'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
                         <span
                             style="background: rgba(0,0,0,0.7); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Python
                             & Unity</span>
@@ -122,7 +122,7 @@
                 <!-- Card 4: Wired Solution -->
                 <div class="project-card" onclick="openProject('wired')">
                     <div class="card-image-placeholder"
-                        style="background-image: url('assets/images/wired/1.jpg'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
+                        style="background-image: url('assets/images/wired/1.webp'); background-size: cover; background-position: center; border-bottom: 1px solid var(--border-color);">
                         <span
                             style="background: rgba(0,0,0,0.7); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Game
                             Jam</span>
@@ -184,11 +184,26 @@
 
     <!-- LIGHTBOX OVERLAY -->
     <div id="lightbox-overlay" class="modal-overlay" style="z-index: 3000;">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)">&#10094;</button>
-        <img id="lightbox-img" src=""
-            style="max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-        <button class="lightbox-next" onclick="changeLightboxImage(1, event)">&#10095;</button>
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Tutup">&times;</button>
+            
+            <div id="lightbox-header" class="lightbox-header">
+                <span id="lightbox-counter" class="lightbox-counter">1 / 1</span>
+                <span id="lightbox-title" class="lightbox-title"></span>
+            </div>
+
+            <div class="lightbox-body">
+                <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)" aria-label="Gambar Sebelumnya">&#10094;</button>
+                
+                <div class="lightbox-img-wrapper">
+                    <img id="lightbox-img" src="" alt="Preview Sertifikat / Gambar Proyek">
+                </div>
+
+                <button class="lightbox-next" onclick="changeLightboxImage(1, event)" aria-label="Gambar Selanjutnya">&#10095;</button>
+            </div>
+
+            <div id="lightbox-thumbnails" class="lightbox-thumbnails"></div>
+        </div>
     </div>
 
     <!-- 5. DAFTAR LAYANAN / KEAHLIAN (SKILLS) -->
@@ -246,7 +261,7 @@
                         <h3>Unity Developer</h3>
                         <h4>PT Kawan Kerja</h4>
                         <p>Memprogram mekanik gameplay 2D menggunakan C#, meningkatkan kecepatan pembuatan prototipe sebesar 20%. Menerapkan arsitektur game berorientasi objek modular yang mengurangi latensi eksekusi script pada lebih dari 5 modul game. Berkolaborasi dalam tim agile beranggotakan 6 orang untuk merilis build game siap pakai (client-ready) mendahului tenggat waktu.</p>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery(['assets/sertifikat/Sertifikat_Magang_Unity Developer_Ivan Saputra (1).png'])">📄 Lihat Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('unity')">📄 Lihat Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -261,12 +276,7 @@
                             <li><strong>Pemrograman Web Interaktif 1 (Sep 2024 – Jan 2025):</strong> Mensupervisi 10 asisten yang menyampaikan kurikulum web <i>full-stack</i> (HTML, CSS, JS, PHP, MySQL).</li>
                             <li><strong>Algoritma & Pemrograman (Feb 2024 – Agu 2024):</strong> Mengelola 8 asisten dan menginstruksikan 200+ mahasiswa dalam dasar pemrograman Python.</li>
                         </ul>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery([
-                            'assets/sertifikat/Koordinator Asisten Praktikum Pemrograman Gim.png',
-                            'assets/sertifikat/Koordinator Asisten Praktikum Pemrograman Multimedia Interaktif.png',
-                            'assets/sertifikat/Koordinator Asisten Praktikum Pemrograman Web Interaktif 1.png',
-                            'assets/sertifikat/Koordinator Asisten Praktikum Algoritma dan Pemrograman.jpg'
-                        ])">📄 Lihat 4 Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('practicum')">📄 Lihat 4 Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -276,7 +286,7 @@
                         <h3>People Development & Research Assistant</h3>
                         <h4>Multimedia Application, Big Data and Cybersecurity Laboratory</h4>
                         <p>Meneliti inovasi arsitektur video game dan sistem multimedia interaktif. Membangun purwarupa cepat (rapid prototype) untuk proyek "Keyboard Warrior" dan "NekoInu", serta memvalidasi mekanik game secara lincah (agile) beserta alur kerjanya.</p>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery(['assets/sertifikat/ASISTEN MBC 20242025.png'])">📄 Lihat Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('mbc')">📄 Lihat Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -286,7 +296,7 @@
                         <h3>Leader of Community Empowerment Program (P2MD)</h3>
                         <h4>Kementerian Pendidikan dan Kebudayaan RI</h4>
                         <p>Memimpin Program Pemberdayaan Masyarakat Desa (P2MD), berhasil mengamankan pendanaan sebesar Rp 27 Juta untuk digitalisasi industri olahan stroberi desa. Menerapkan solusi penjualan digital yang secara langsung meningkatkan daya saing, memperluas jangkauan pasar, dan menumbuhkan ekonomi berkelanjutan bagi 10 petani lokal.</p>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery(['assets/sertifikat/P2MD_IVAN SAPUTRA.png'])">📄 Lihat Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('p2md')">📄 Lihat Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -296,10 +306,7 @@
                         <h3>Project Manager</h3>
                         <h4>IEEE Telkom University Student Branch</h4>
                         <p>Mengarahkan jadwal proyek desain di 4 divisi organisasi, mencapai tingkat keberhasilan pengiriman aset tepat waktu sebesar 100%. Mengelola permintaan desain dari berbagai stakeholder, serta memprioritaskan alokasi sumber daya untuk tim kreatif beranggotakan 8 orang.</p>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery([
-                            'assets/sertifikat/SERTIFIKAT KEANGGOTAAN IEEE 2022.png',
-                            'assets/sertifikat/Ivan Saputra ieee 2024_page-0001.jpg'
-                        ])">📄 Lihat 2 Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('ieee')">📄 Lihat 2 Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -309,7 +316,7 @@
                         <h3>Staff Human Resources Development</h3>
                         <h4>HIMATREDIA</h4>
                         <p>Menegakkan panduan kepatuhan organisasi di 11 divisi mahasiswa, meningkatkan partisipasi anggota internal sebesar 25%. Memfasilitasi pertemuan penyelarasan lintas divisi untuk memastikan inisiatif mahasiswa tetap mematuhi kebijakan institusi.</p>
-                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery(['assets/sertifikat/Himatredia.jpg'])">📄 Lihat Sertifikat &rarr;</button>
+                        <button class="btn-link" style="margin-top: 10px; font-size: 0.9rem;" onclick="openCertGallery('himatredia')">📄 Lihat Sertifikat &rarr;</button>
                     </div>
                 </div>
 
@@ -405,7 +412,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=5"></script>
 </body>
 
 </html>
